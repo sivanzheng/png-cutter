@@ -1,0 +1,41 @@
+{
+  "name": "png-cutter",
+  "version": "1.0.0",
+  "description": "cut out the transparent pixels around the png image to reduce the size of the png image",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "test": "jest --config jestconfig.json",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShiverZheng/png-cutter.git"
+  },
+  "keywords": ["png", "typescript", "cut", "transparent pixels"],
+  "author": "Shiver Zheng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShiverZheng/png-cutter/issues"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "homepage": "https://github.com/ShiverZheng/png-cutter#readme",
+  "devDependencies": {
+    "@types/jest": "^25.2.3",
+    "jest": "^26.0.1",
+    "jest-cli": "^26.0.1",
+    "prettier": "^1.19.1",
+    "ts-jest": "^26.1.0",
+    "tslint": "^6.1.2",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.9.5"
+  }
+}
