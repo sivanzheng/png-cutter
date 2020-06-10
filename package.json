@@ -1,8 +1,9 @@
 {
   "name": "png-cutter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "cut out the transparent pixels around the png image to reduce the size of the png image",
   "main": "index.js",
+  "types": "./lib/index.d.ts",
   "scripts": {
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
