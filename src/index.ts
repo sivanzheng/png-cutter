@@ -36,10 +36,10 @@ async function pngCutter(path: string): Promise<Cutted> {
             }
         }
     
-        const offsetX = xSpaces.indexOf(false) - 1;
-        const offsetY = ySpaces.indexOf(false) - 1;
-        const w = xSpaces.lastIndexOf(false) - offsetX + 3;
-        const h = ySpaces.lastIndexOf(false) - offsetY + 3;
+        const offsetX = xSpaces.indexOf(false);
+        const offsetY = ySpaces.indexOf(false);
+        const w = xSpaces.lastIndexOf(false) - offsetX;
+        const h = ySpaces.lastIndexOf(false) - offsetY;
     
         const canvas2 = document.createElement('canvas');
         canvas2.width = w;
