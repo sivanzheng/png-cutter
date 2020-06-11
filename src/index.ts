@@ -1,4 +1,4 @@
-export interface Cutted {
+interface Cutted {
     w: number,
     h: number,
     offsetX: number,
@@ -8,7 +8,7 @@ export interface Cutted {
     dataUrl: string,
 }
 
-export default async function pngCutter(path: string): Promise<Cutted> {
+async function pngCutter(path: string): Promise<Cutted> {
     const canvas = document.createElement('canvas');
     if (canvas && canvas.getContext) {
         const ctx = canvas.getContext('2d') as CanvasRenderingContext2D;
@@ -59,4 +59,9 @@ export default async function pngCutter(path: string): Promise<Cutted> {
     } else {
         throw Error('needs canvas');
     }
+}
+
+export {
+    pngCutter,
+    Cutted,
 }

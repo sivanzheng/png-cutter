@@ -7,5 +7,5 @@ interface Cutted {
     sourceH: number;
     dataUrl: string;
 }
-export declare function pngCutter(path: string): Promise<Cutted>;
-export {};
+declare function pngCutter(path: string): Promise<Cutted>;
+export { pngCutter, Cutted, };
