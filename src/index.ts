@@ -8,7 +8,7 @@ interface Cutted {
     dataUrl: string,
 }
 
-async function pngCutter(path: string): Promise<Cutted> {
+async function pngCutter(path: string, quality = 1): Promise<Cutted> {
     const canvas = document.createElement('canvas');
     if (canvas && canvas.getContext) {
         const ctx = canvas.getContext('2d') as CanvasRenderingContext2D;
@@ -46,7 +46,7 @@ async function pngCutter(path: string): Promise<Cutted> {
         canvas2.height = h;
         const ctx2 = canvas2.getContext('2d') as CanvasRenderingContext2D;
         ctx2.drawImage(image, offsetX, offsetY, w, h, 0, 0, w, h);
-        const dataUrl = canvas2.toDataURL('image/png');
+        const dataUrl = canvas2.toDataURL('image/png', quality);
         return {
             w,
             h,
