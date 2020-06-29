@@ -7,8 +7,7 @@
     import { pngCutter } from 'png-cutter';
     /**
      *  @param (string) dataUrl Picture URL or Base64
-     *  @param (number) quality You can set the quality from 0 to 1 and the default is 1.
      */
-    const result = await pngCutter(dataUrl, quality);
+    const result = await pngCutter(dataUrl);
 ```
 [Example: https://shiverzheng.github.io/png-cutter/lib/index.html](https://shiverzheng.github.io/png-cutter/lib/index.html)
