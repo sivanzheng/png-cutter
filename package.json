@@ -1,6 +1,6 @@
 {
   "name": "png-cutter",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "cut out the transparent pixels around the png image to reduce the size of the png image",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
