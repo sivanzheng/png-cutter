@@ -1,13 +1,16 @@
 # png cutter
 
-### How to use ?
+### Usage 
 
-#### npm install png-cutter
+```shell 
+$ npm install png-cutter
+```
+
 ```javascript
-    import { pngCutter } from 'png-cutter';
-    /**
-     *  @param (string) dataUrl Picture URL or Base64
-     */
-    const result = await pngCutter(dataUrl);
+import { pngCutter } from 'png-cutter';
+/**
+ * @param (string) dataUrl Picture URL or Base64
+ */
+const result = await pngCutter(dataUrl);
 ```
 [Example: https://shiverzheng.github.io/png-cutter/lib/index.html](https://shiverzheng.github.io/png-cutter/lib/index.html)
